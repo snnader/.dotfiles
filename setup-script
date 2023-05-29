@@ -1,0 +1,20 @@
+#!/bin/bash
+
+sudo apt-get install vim git zsh tmux terminator
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
+ln -sf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc
+ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
+cp -f $HOME/.dotfiles/.terminator-config $HOME/.config/terminator/config
+cp -f $HOME/.dotfiles/.tmuxtheme $HOME/.tmux-themepack/powerline/double/cyan.tmuxtheme
+
+echo Install nerd fonts from the 4 files in the current directory
+
