@@ -13,6 +13,7 @@ ln -sf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc
 ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
 ln -sf $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
+ln -sf $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
 cp -f $HOME/.dotfiles/.terminator-config $HOME/.config/terminator/config
 cp -f $HOME/.dotfiles/.tmuxtheme $HOME/.tmux-themepack/powerline/double/cyan.tmuxtheme
 
